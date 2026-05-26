@@ -7,7 +7,6 @@ struct Venda {
     float valorUnitario;
     float total;
 };
-
 struct Venda vendas[100];
 int contador = 0;
 
@@ -20,10 +19,7 @@ void cadastrarVenda() {
 
     printf("Valor unitario: ");
     scanf("%f", &vendas[contador].valorUnitario);
-
     vendas[contador].total = vendas[contador].quantidade * vendas[contador].valorUnitario;
-
-    // Desconto
     if (vendas[contador].total > 100) {
         vendas[contador].total *= 0.9;
     }
@@ -64,7 +60,7 @@ int main() {
             case 0:
                 return 0;
             default:
-                printf("Opcao invalida!\n");
+                printf("opcao invalida\n");
         }
     }
 }
